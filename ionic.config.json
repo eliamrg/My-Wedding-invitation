@@ -1,0 +1,7 @@
+{
+  "name": "MyWeddingInvitation",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
