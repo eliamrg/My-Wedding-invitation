@@ -41,4 +41,13 @@ export class RSVPComponent implements OnInit {
     //   console.warn("No se recibió un ID válido en el componente RSVP.");
     // }
   }
+
+  ConfirmarNovio(){
+    const url = 'https://wa.me/5218112726371?text=¡Hola%20Santiago!%20Confirmo%20mi%20asistencia%20a%20la%20boda.%20Mi%20nombre%20es%20'+this.InfoInvitado.Nombre+'%20y%20asistiremos%20'+this.InfoInvitado.Cantidad+'%20personas.';
+    window.open(url, '_blank');
+  }
+  ConfirmarNovia(){
+    const url = 'https://wa.me/5218134425979?text=¡Hola%20Aleida!%20Confirmo%20mi%20asistencia%20a%20la%20boda.%20Mi%20nombre%20es%20'+this.InfoInvitado.Nombre+'%20y%20asistiremos%20'+this.InfoInvitado.Cantidad+'%20personas.';
+    window.open(url, '_blank');
+  }
 }

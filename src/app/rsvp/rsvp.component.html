@@ -7,15 +7,27 @@
       <p><span style="font-weight: bold;">Invitado(s):</span>  {{InfoInvitado.Nombre}}</p>
       <p><span style="font-weight: bold;">Numero de Personas:</span> {{InfoInvitado.Cantidad}}</p>
     </div>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button color="dark" shape="round" (click)="ConfirmarNovio()"> 
+            <!-- <ion-icon name="checkmark-circle-outline" slot="start"></ion-icon> -->
+            Confirmar con el Novio
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="light" shape="round" (click)="ConfirmarNovia()"> 
+            <!-- <ion-icon name="checkmark-circle-outline" slot="start"></ion-icon> -->
+            Confirmar con la Novia
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
     
-    <ion-button color="dark" shape="round"> 
-      <ion-icon name="checkmark-circle-outline" slot="start"></ion-icon>
-      Confirmar Asistencia
-    </ion-button>
     <br>
     <p style="font-size: small;">
-      Aunque amamos a sus pequeños, esta será una celebración exclusiva para adultos.  
-      Les agradecemos su comprensión y esperamos compartir juntos esta noche especial.
+      **Aunque amamos a sus pequeños, esta será una celebración exclusiva para adultos.  
+      Les agradecemos su comprensión y esperamos compartir juntos esta noche especial.**
     </p>
   </div> 
 </div>
