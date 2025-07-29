@@ -1,0 +1,16 @@
+<section class="video-section" (click)="playVideo()" [class.video-playing]="isPlaying">
+  <video
+    #myVideo
+    
+    playsinline
+    loop
+    preload="auto"
+  >
+    <source src="assets/Videos/VideoPedidaConAudio.mp4" type="video/mp4" />
+    Tu navegador no soporta el video HTML5.
+  </video>
+
+  <div class="overlay" *ngIf="!isPlaying">
+    <button class="play-button">▶</button>
+  </div>
+</section>

@@ -1,0 +1,155 @@
+/* Contenedor principal que ocupa toda la pantalla */
+.event-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+    height: 100vh; /* Ocupar toda la pantalla */
+    //background: url('../../assets/photos/DefaultBanner.webp') no-repeat center center;
+    background-color: #dde1d5;
+    // background-size: cover;
+    // position: relative;
+}
+
+/* Oscurecer el fondo con un overlay */
+// .event-container::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background: rgba(0, 0, 0, 0.5); /* Capa oscura */
+//     z-index: 0;
+// }
+
+/* Contenedor de las tarjetas */
+.event-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    z-index: 1;
+}
+h1{
+    font-family: "Sacramento",serif;
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+/* Tarjeta de confirmación (arriba) */
+.attendance-card {
+    // background: rgba(0, 0, 0, 0.4);
+    // backdrop-filter: blur(15px);
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    // border: 1px solid rgba(255, 255, 255, 0.2);
+    // color: white;
+    margin-bottom: 20px;
+}
+
+/* Botón de confirmación */
+.confirm-btn {
+    background: rgb(55, 97, 175);
+    color: black;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.confirm-btn:hover {
+    background: #dde1d5;
+}
+
+/* Contenedor de las tarjetas de eventos */
+.event-grid {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center; /* Centra los elementos en pantallas grandes */
+}
+
+/* Tarjetas de eventos */
+.event-card {
+    background: white;
+    border-radius: 10px;
+    //background:rgba(255, 255, 255, 0.1);
+    // backdrop-filter: blur(5px);
+    
+    padding: 20px;
+    flex: 1;
+    text-align: center;
+    // box-shadow: 0 4px 8px rgba(6, 48, 112, 0.3);
+    // border: 1px solid rgba(255, 255, 255, 0.0);
+    color: black;
+    max-width: 400px;
+}
+
+/* Línea divisoria */
+hr {
+    border: none;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 10px 0;
+}
+
+/* Íconos y detalles */
+.event-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/* Ubicación */
+.event-location {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+// /* Botón de ubicación ION BUTTON*/
+// .location-btn {
+    
+//     color: black;
+//     border: 1px;
+//     border-color: black;
+//     padding: 10px 15px;
+//     border-radius: 20px;
+//     font-size: 16px;
+//     transition: 0.3s;
+// }
+
+.location-btn:hover {
+    background: #640909;
+}
+
+/* RESPONSIVE: En móviles, se apilan y se centran */
+@media (max-width: 768px) {
+    .event-container {
+        height: auto; /* Permitir scroll en móviles */
+        padding: 20px;
+    }
+
+    .event-grid {
+        flex-direction: column;
+        align-items: center; /* Centrar las tarjetas en móviles */
+        width: 100%;
+    }
+
+    .event-card,
+    .attendance-card {
+        max-width: 90%; /* Evitar que ocupen todo el ancho */
+    }
+}

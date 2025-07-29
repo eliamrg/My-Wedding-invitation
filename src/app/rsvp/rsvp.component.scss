@@ -1,0 +1,72 @@
+/* Sección principal */
+.couple-section {
+    text-align: center;
+    background-color: #f3efd9;
+    //padding: 50px 20px;
+}
+
+/* Título */
+.couple-section h2 {
+    font-family: "Sacramento",serif;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+/* Texto introductorio */
+.couple-section p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+    
+}
+.invitados p{
+    font-size: 15px;
+}
+/* Fecha */
+.couple-section .wedding-date {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* Contenedor de los novios */
+.couple-wrap {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Responsivo: En pantallas pequeñas, ocupará el 100% del ancho */
+@media screen and (max-width: 768px) {
+    .couple-wrap {
+        width: 100%;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+
+
+
+
+
+
+/* Tarjeta de confirmación (arriba) */
+.attendance-card {
+    background-color: #dde1d5;
+    //background: rgba(214, 212, 212, 0.4);
+    //backdrop-filter: blur(15px);
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    // border: 1px solid rgba(255, 255, 255, 0.2);
+    color: black;
+    // margin-bottom: 20px;
+    
+}

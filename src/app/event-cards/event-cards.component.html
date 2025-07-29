@@ -1,0 +1,53 @@
+<div class="event-container">
+  <div class="event-content">
+       <h1>Eventos</h1>
+
+      <!-- Contenedor de las tarjetas de eventos -->
+      <div class="event-grid">
+          <!-- Tarjeta de la Ceremonia Religiosa -->
+          <div class="event-card">
+              <h2>Discurso Bíblico</h2>
+              <hr />
+              <div class="event-details">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>4:30 PM</span>
+              </div>
+              <div class="event-details">
+                  <ion-icon name="calendar-outline"></ion-icon>
+                  <span>Domingo 09 Noviembre, 2025</span>
+              </div>
+              <!-- <p>Te invitamos a escuchar nuestro discurso bíblico "Un matrimonio honorable a la vista de Dios" que se llevará a cabo en:</p> -->
+              <p class="event-location">
+                  Salón del Reino de los Testígos de Jehová.
+              </p>
+              <p>
+                C. Zuazua 502, Lázaro Cárdenas, 66058 Cdad. Gral. Escobedo, N.L.
+              </p>
+              <ion-button color="dark" shape="round" (click)="ubicacionSalon()"><ion-icon slot="start" name="location-outline"></ion-icon>Ver Ubicación</ion-button>
+          </div>
+
+          <!-- Tarjeta de la Recepción -->
+          <div class="event-card">
+              <h2>Recepción</h2>
+              <hr />
+              <div class="event-details">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>6:30 PM</span>
+              </div>
+              <div class="event-details">
+                  <ion-icon name="calendar-outline"></ion-icon>
+                  <span>Domingo 09 Noviembre, 2025</span>
+              </div>
+              <!-- <p>Acompáñanos a celebrar en la recepción de nuestra boda en:</p> -->
+              
+              <p class="event-location">
+                  Campanario Eventos.
+              </p>
+              <p>
+                Blvrd Julian Treviño Elizondo 300, El Milagro, 66634 Cdad. Apodaca, N.L.
+              </p>
+              <ion-button color="dark" shape="round" (click)="ubicacionRecepcion()"><ion-icon slot="start" name="location-outline"></ion-icon>Ver Ubicación</ion-button>
+          </div>
+      </div>
+  </div>
+</div>

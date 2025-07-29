@@ -1,0 +1,191 @@
+
+/* Contenedor principal */
+
+
+.countdown-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;  /* Centrado vertical */
+    align-items: center;      /* Centrado horizontal */
+    height: 100vh;            /* Asegura que ocupe toda la altura de la pantalla */
+    padding: 10px;
+    text-align: center;       /* Centra el texto dentro del contenedor */
+    position: relative;       /* Para que el banner de fondo se posicione correctamente */
+    z-index: 1;               /* Asegura que esté por encima del fondo */
+    width: 100%;              /* Asegura que el contenedor ocupe el 100% del ancho */
+  }
+  
+.banner-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ),
+    url('../../assets/photos/BANNER_8162.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+}
+
+  
+  /* Estilo para los nombres (Santiago & Aleida) */
+  .names {
+    font-family: "Sacramento",Arial, serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 60px;
+   
+    color: white;
+    //color:rgb(221, 211, 167);
+    letter-spacing: 3px;
+    //text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+    margin-bottom: -50px; /* Añadir un espacio entre los nombres y el contador */
+    
+  }
+  
+  /* Estilo del contador */
+  .countdown-container {
+    display: flex;
+    flex-direction: column; /* Mantenerlo en columna */
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  .countdown {
+    display: flex;
+    gap: 10px; /* Reducir el espacio entre los elementos */
+    font-size: 24px;  /* Reducir el tamaño de la fuente */
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    justify-content: center;
+    flex-direction: row;  /* Forzar la disposición en fila para el contador */
+    flex-wrap: nowrap;    /* Evita el apilamiento */
+    overflow-x: auto;     /* Permite que los elementos se deslicen si es necesario */
+    max-width: 100%;      /* Asegura que no se desborde de la pantalla */
+  }
+  
+  /* Asegurarse de que todos los items tengan el mismo tamaño */
+  .countdown-item {
+    background-color: #ffffff;
+    padding: 10px;        /* Reducir el padding */
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 90px;      /* Asegurar que los items tengan un tamaño mínimo */
+    max-width: 100px;     /* Reducir el tamaño máximo de los items */
+    width: 100px;         /* Fijar un ancho constante para todos los items */
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .countdown-item span {
+    
+    display: block;
+    font-size: 14px; /* Reducir aún más el tamaño del texto */
+    color: #6c757d;
+  }
+  
+  #days, #hours, #minutes, #seconds {
+    color: #000;
+    font-size: 36px;  /* Reducir el tamaño de los números */
+  }
+  
+  .date{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    
+    //linea
+    border-bottom: 1px solid #fff; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+  }
+  /* Estilo para "Save the Date" */
+  .save-the-date {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 10px; /* Espacio entre el contador y el texto */
+  }
+  
+  /* Media Query para pantallas pequeñas (menos de 600px) */
+  @media (max-width: 600px) {
+    .countdown-wrapper {
+        justify-content: center;  /* Centrado vertical */
+    }
+  
+    .countdown {
+      font-size: 18px; /* Reducir aún más el tamaño de la fuente en pantallas pequeñas */
+      gap: 8px;  /* Reducir el espacio entre los elementos */
+      overflow-x: auto;  /* Asegura que los elementos puedan desplazarse horizontalmente */
+    }
+  
+    .countdown-item {
+        min-width: 70px;   /* Reducir aún más el tamaño mínimo de los items */
+      max-width: 70px; 
+      padding: 8px;      /* Reducir el padding en pantallas pequeñas */
+      font-size: 12px;    /* Reducir el tamaño del texto */
+      width: 90px;        /* Ajustar el tamaño de los items */
+    }
+  
+    #days, #hours, #minutes, #seconds {
+      font-size: 30px;
+    }
+  
+    .save-the-date {
+      font-size: 24px;
+    }
+  
+    .names {
+      font-size: 50px;
+      margin-top: -100px;
+    }
+  }
+  
+  /* Media Query para pantallas muy pequeñas (menos de 400px) */
+  @media (max-width: 400px) {
+  
+    .countdown-wrapper {
+        justify-content: center;  /* Centrado vertical */
+    }
+    .countdown {
+      flex-direction: row;
+      justify-content: space-evenly;
+      overflow-x: auto;
+    }
+  
+    .countdown-item {
+      min-width: 70px;   /* Reducir aún más el tamaño mínimo de los items */
+      max-width: 70px;   /* Reducir aún más el tamaño máximo de los items */
+      font-size: 10px;   /* Reducir el tamaño del texto */
+      padding: 6px;      /* Reducir el padding */
+      width: 60px;       /* Fijar un ancho constante para todos los items */
+    }
+  
+    #days, #hours, #minutes, #seconds {
+      font-size: 28px;
+    }
+  
+    .save-the-date {
+      font-size: 20px;
+    }
+  
+    .names {
+      font-size: 50px;
+      margin-top: -100px;
+    }
+  }
+  

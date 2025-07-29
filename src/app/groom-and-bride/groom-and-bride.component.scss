@@ -1,0 +1,158 @@
+/* Sección principal */
+.couple-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #dde1d5;
+}
+
+/* Título */
+.couple-section h2 {
+    font-family: "Sacramento",serif;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+/* Texto introductorio */
+.couple-section p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Fecha */
+.couple-section .wedding-date {
+    font-size: 24px;
+    --font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* Contenedor de los novios */
+.couple-wrap {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Responsivo: En pantallas pequeñas, ocupará el 100% del ancho */
+@media screen and (max-width: 768px) {
+    .couple-wrap {
+        width: 100%;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* Icono de corazón */
+.heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    animation: pulse 1s ease infinite;
+}
+
+.heart i {
+    font-size: 20px;
+    background: #fff;
+    padding: 20px;
+    color: #323232;
+    border-radius: 50%;
+}
+
+/* En móviles, ocultamos el corazón */
+@media screen and (max-width: 768px) {
+    .heart {
+        display: none;
+    }
+}
+
+/* Cada novio ocupa la mitad de la pantalla */
+.couple-half {
+    width: 50%;
+    text-align: center;
+}
+
+/* En móviles, se apilan */
+@media screen and (max-width: 768px) {
+    .couple-half {
+        width: 100%;
+    }
+}
+
+/* Nombres de los novios */
+.couple-half h3 {
+    font-family: "Sacramento", serif;
+    font-size: 30px;
+    color: #323232;
+}
+
+/* Fotos de los novios */
+.couple-half .groom, 
+.couple-half .bride {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* En pantallas pequeñas, reducimos el tamaño */
+@media screen and (max-width: 480px) {
+    .couple-half .groom, 
+    .couple-half .bride {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Información de los padres */
+.couple-half .parents {
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+.couple-half p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Ajustes de alineación */
+.couple-half .desc-groom {
+    padding-right: 180px;
+    text-align: right;
+}
+
+.couple-half .desc-bride {
+    padding-left: 180px;
+    text-align: left;
+}
+
+/* En móviles, centramos el texto */
+@media screen and (max-width: 480px) {
+    .couple-half .desc-groom,
+    .couple-half .desc-bride {
+        padding: 0;
+        text-align: center;
+    }
+}
+
+
+/* Tarjeta de confirmación (arriba) */
+.attendance-card {
+    background: rgba(214, 212, 212, 0.4);
+    //backdrop-filter: blur(15px);
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: black;
+    margin-bottom: 20px;
+}

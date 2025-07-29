@@ -1,20 +1,42 @@
-<ion-header [translucent]="true">
+<!-- 
+<ion-header transluscent="true" mode="ios">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Santiago & Aleida
     </ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+
+
+<ion-content  mode="ios">
+  <!-- <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Santiago & Aleida</ion-title>
     </ion-toolbar>
-  </ion-header>
+  </ion-header> -->
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <app-banner></app-banner>
+  
+  <app-groom-and-bride></app-groom-and-bride>
+  
+  <app-image-separator></app-image-separator>
+
+  <app-rsvp [fam]="fam"  [cantidad]="cantidad"></app-rsvp>
+  
+  <app-image-separator2></app-image-separator2>
+
+  <app-event-cards></app-event-cards>
+  
+  <app-image-separator3></app-image-separator3>
+  
+  <app-dress-code></app-dress-code>
+
+  <app-photo-gallery></app-photo-gallery>
+
+  <!-- <app-video-component></app-video-component> -->
+  
+    
+  
 </ion-content>
+
