@@ -11,43 +11,39 @@ import { FirebasequeryService } from '../firebasequery.service';
   styleUrls: ['./rsvp.component.scss'],
 })
 export class RSVPComponent implements OnInit {
-  @Input() fam: string | null = null; // 🔹 Recibe el ID de HomePage
+  @Input() fam: string | null = null;     // 🔹 Recibe el ID de HomePage
   @Input() cantidad: string | null = null; // 🔹 Recibe el ID de HomePage
 
   InfoInvitado: { Nombre: string; Cantidad: string } = {
-    Nombre: this.fam || '',
-    Cantidad:this.cantidad || '',
-
+    Nombre: '',
+    Cantidad: ''
   };
 
   constructor(private firestore: FirebasequeryService) {}
 
   async ngOnInit() {
-    this.InfoInvitado.Nombre=this.fam|| 'Invitado no registrado, favor de contactar a Santiago'
-    this.InfoInvitado.Cantidad=this.cantidad||'0';
-    // console.log(this.id)
-    // if (this.id) {
-    //   try {
-    //     const doc = await this.firestore.getInformacionInvitado(this.id); // 🔹 Usa el ID recibido
-    //     if (doc) {
-    //       this.InfoInvitado.Nombre = doc['Nombre'] || 'Invitado no registrado, favor de contactar a Santiago';
-    //       this.InfoInvitado.Cantidad = doc['Cantidad'] ?? 0;
-    //     }
-    //     console.log(this.InfoInvitado);
-    //   } catch (error) {
-    //     console.error("Error al obtener la información del invitado:", error);
-    //   }
-    // } else {
-    //   console.warn("No se recibió un ID válido en el componente RSVP.");
-    // }
+    // 🔹 Decodifica doble por si viene doble encode (%2520 → %20 → " ")
+    let nombre = this.fam || '';
+    try {
+      nombre = decodeURIComponent(nombre);
+      nombre = decodeURIComponent(nombre);
+    } catch (e) {
+      console.warn("Error al decodificar nombre:", e);
+    }
+
+    this.InfoInvitado.Nombre = nombre || 'Invitado no registrado, favor de contactar a Santiago';
+    this.InfoInvitado.Cantidad = this.cantidad ? decodeURIComponent(this.cantidad) : '0';
+
+    console.log(this.InfoInvitado.Nombre);
   }
 
-  ConfirmarNovio(){
-    const url = 'https://wa.me/5218112726371?text=¡Hola%20Santiago!%20Confirmo%20mi%20asistencia%20a%20la%20boda.%20Mi%20nombre%20es%20'+this.InfoInvitado.Nombre+'%20y%20asistiremos%20'+this.InfoInvitado.Cantidad+'%20personas.';
+  ConfirmarNovio() {
+    const url = `https://wa.me/5218112726371?text=¡Hola%20Santiago!%20Confirmo%20mi%20asistencia%20a%20la%20boda.%20Mi%20nombre%20es%20${encodeURIComponent(this.InfoInvitado.Nombre)}%20y%20asistiremos%20${encodeURIComponent(this.InfoInvitado.Cantidad)}%20personas.`;
     window.open(url, '_blank');
   }
-  ConfirmarNovia(){
-    const url = 'https://wa.me/5218134425979?text=¡Hola%20Aleida!%20Confirmo%20mi%20asistencia%20a%20la%20boda.%20Mi%20nombre%20es%20'+this.InfoInvitado.Nombre+'%20y%20asistiremos%20'+this.InfoInvitado.Cantidad+'%20personas.';
+
+  ConfirmarNovia() {
+    const url = `https://wa.me/5218134425979?text=¡Hola%20Aleida!%20Confirmo%20mi%20asistencia%20a%20la%20boda.%20Mi%20nombre%20es%20${encodeURIComponent(this.InfoInvitado.Nombre)}%20y%20asistiremos%20${encodeURIComponent(this.InfoInvitado.Cantidad)}%20personas.`;
     window.open(url, '_blank');
   }
 }

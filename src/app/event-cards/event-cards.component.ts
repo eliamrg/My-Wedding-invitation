@@ -16,8 +16,8 @@ export class EventCardsComponent  implements OnInit {
   ngOnInit() {}
 
   ubicacionRecepcion(){
-const url = 'https://maps.app.goo.gl/PJEUqsE3TCQoDBoA9';
-  window.open(url, '_blank');
+    const url = 'https://maps.app.goo.gl/PJEUqsE3TCQoDBoA9';
+    window.open(url, '_blank');
   }
   ubicacionSalon(){
     const url = 'https://maps.app.goo.gl/xLG5A1WsQUTxZpFE6';

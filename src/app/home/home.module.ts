@@ -33,7 +33,8 @@ import { ImageSeparator3Page } from '../image-separator3/image-separator3.page';
     VideoComponentComponent,
     ImageSeparatorPage,
     ImageSeparator2Page,
-    ImageSeparator3Page
+    ImageSeparator3Page,
+    
     
   ],
   declarations: [HomePage]
